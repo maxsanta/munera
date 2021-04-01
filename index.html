@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="assets/css/style1.css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #30a86c;">
         <div class="container-fluid">
-        <i class="fas fa-dragon">    </i>
+        <i class="fas fa-dragon m5">    </i>
           <a class="navbar-brand" href="#">Munera</a>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +34,7 @@
                 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" href="#sectioncontact">Contacto</a>
               </li>
               <li class="nav-item">
                 <button class="btn btn-sm btn-outline-secondary" type="button">Iniciar Sesión</button>
@@ -42,7 +43,9 @@
           </div>
         </div>
       </nav>
+    
 
+      
       <!-- Background image --
 <div class="bg-image" style=" background-image: url('C:/Users/56989/Desktop/Startup freelance/Web Frontend/assets/img/Illustration.jpg');
 height: 50vh; "></div>
@@ -82,9 +85,38 @@ height: 400px;
     <!--Grid row-->
     <div class="row">
       <!--Grid column-->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0" id="sectioncontact">
         <h5 class="text">Contáctanos</h5>
 
+
+        <p>
+          <form class="text-left border border-light p-0" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        
+                     
+            <!-- Name -->
+            <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+              class="form-control mb-1" placeholder="Nombre">
+          
+            <!-- Email -->
+            <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+              class="form-control mb-4" placeholder="E-mail">
+          
+        
+          s
+            <!-- Message -->
+            <div class="form-group">
+              <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
+                rows="3" placeholder="Mensaje"></textarea>
+            </div>
+          
+          
+            <!-- Send button -->
+            <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+              mdbWavesEffect type="submit" value="submit" [disabled]="disabledSubmitButton">Enviar</button>
+          
+          </form>
+          <!-- Default form contact -->
+        </p>
 
       </div>
       <!--Grid column-->
@@ -138,7 +170,7 @@ height: 400px;
 
     
 
-    
+    <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
